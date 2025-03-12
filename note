@@ -1,0 +1,145 @@
+REST API
+============
+REST stands for Representational State Transfer. It's an architectural style that allows developers 
+to build web services that exchange data between systems.
+REST APIs are a key part of modern web development. 
+
+
+What is Rest Assured?
+==========================
+Rest Assured is an open-source Java library to test and validate the REST APIs.
+It can be used to test JSON and XML-based web services
+
+Rest Assured can be integrated with JUnit and TestNG framework for writing test cases.
+
+Rest Assured supports HTTP requests, including POST, GET, PUT, DELETE, OPTION, PATCH, and HEAD.
+
+It can be used to validate and verify the response to these requests.
+Rest Assured uses Hamcrest  library for asserting the testcases
+
+static import
+=============
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matcher.*;
+
+why we need static import??
+============================
+we use static import to improve code readability and make API testing more concise. static import allows us to 
+access static methods and fields of a class without qualifying them with the class name 
+
+
+
+
+
+validate GET request
+========================
+@Test
+	public void one() {
+
+		given().baseUri("https://reqres.in/")
+		.header("Content-type","application/json")
+		.when().get("api/users/2")
+		.then().log()
+		.all().statusCode(200);
+	}
+o/p:
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+
+
+
+
+what is headers
+================
+headers are key-value pairs sent in HTTP request and response to provide metadata about the request or response
+they will help with authentication,content-type,caching and more...
+
+common API Headers
+1 Authentication & Security
+used for api authentication
+Authorization:Bearer<token>
+API-Key:<your_api_key>
+custom key for authentication
+
+2.content &format
+content-Type :application/json
+specify the format of the request body
+
+3.Caching & Performance
+Cache-Control:no-cache
+prevent caching
+
+
+RequestSpecifiacation
+========================
+it is an interface which is used to define common request properties like headers,authentications,parameters and 
+base URLs which can be reused across multiple testcases
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example of implementation of Interface in Selenium:
+Webdriver and Webelements - Webdriver is an interface used to launch different browsers such as firefox, chrome,safari etc.
+Whereas,webelement is an interface used to identify the elements in a web page.
+
+Webdriver driver = new Firefoxdriver();
+ where:driver is the reference variable pointing to the interface and creating an object.
+Firefoxdriver() is the object created.
+
+
+Polymorphism The word polymorphism means having many forms.
+Polymorphism is the concept in Java which allows to perform a task in multiple ways. It is a combination of method overloading and method overriding.
+
+Method overloading : A class having multiple methods with the same name but different parameters is called methods overloading.
+
+Example of implementation of Method overloading in Selenium:
+
+Implicit wait, assert classes are the examples of method overloading which we use in Selenium.
+
+The format of the implicit wait can be written as:
+
+driver.manage().timeouts().implicitlyWait()(10,TimeUnit.SECONDS);
+
+This timestamp can be seconds, minutes or hours where the webdriver implicitly wait for a particular element to appear in a web page.
+
+Method overriding : Declaring a method in the child class which is already present in the parent class is called method overriding.
+
+Example of implementation of Method overriding in Selenium:
+
+get() and navigate() methods of different drivers are perfect examples of method overriding in Selenium 
+where we use these methods in different classes irrespective of their number of occurences.
+
+
+
+
+
+
+
+
+
+
+
+In conclusion, the Object-Oriented Programming (OOP) concepts in Java—
+abstraction, inheritance, interface, polymorphism, and encapsulation—are fundamental 
+in creating robust and efficient software applications.
