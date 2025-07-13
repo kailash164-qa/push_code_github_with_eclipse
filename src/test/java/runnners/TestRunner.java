@@ -6,7 +6,7 @@ import io.cucumber.junit.*;
     
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "C:\\Users\\KailashBangad\\eclipse-workspace\\RestAssuredEx1\\src\\test\\resources\\features\\login.feature",
+		features = "Feature\\features\\invalidLogin.feature",
         glue ="stepDefinination",
        
         

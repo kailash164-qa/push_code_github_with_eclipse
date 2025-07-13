@@ -143,3 +143,37 @@ where we use these methods in different classes irrespective of their number of 
 In conclusion, the Object-Oriented Programming (OOP) concepts in Java—
 abstraction, inheritance, interface, polymorphism, and encapsulation—are fundamental 
 in creating robust and efficient software applications.
+
+
+
+Selenium
+=========
+How to explain project 
+============================
+I worked on E-commerence webApplication that allow user to search product add them to cart and make online payments
+this application had different modules like Login,Product Search Cart,Checkout and Order History
+The goal of our automation project was reduce manual testing effort,ensure faster release,and improve test coverage
+
+Why Automation required
+=========================
+Since application had frequent UI changes and multiple test scenario,manual testing was time consuming
+we implemented selenium automation framework to handle regression testing,
+ensure cross-browser compatability,and speed up the release cycle.
+the automated script helped identifying  issue early and reduced manual efforts by 60% 
+
+How test script were executed
+==============================
+Test Script were executed on different/multiple browsers(chrome,edge,safari,firefox) using selenium grid for parallel execution
+we integrated our automation scripts with JENKINS to enable scheduled execution after every code commit
+whenever new build was deployed,jenkins triggered maven commands(mvn clean test),executed testcase and sent test reports via email to teams
+
+
+
+
+
+
+
+
+
+
+

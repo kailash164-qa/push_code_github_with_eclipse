@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="stepDefinination.LoginStepDefination">
+      <class name="com.gspan.RestAssuredEx1.Test_Basic_All_In_Rest_Assured">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="loginTest"/>
+          <include name="testEqualToFunction"/>
         </methods>
-      </class> <!-- stepDefinination.LoginStepDefination -->
+      </class> <!-- com.gspan.RestAssuredEx1.Test_Basic_All_In_Rest_Assured -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
